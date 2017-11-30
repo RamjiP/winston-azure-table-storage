@@ -1,0 +1,40 @@
+{
+  "name": "winston-azure-table-storage",
+  "version": "1.0.0",
+  "description": "A Windows Azure table storage transport for winston, updated with Azure SDK and winston library",
+  "main": "./lib/winston-azure-table-storage",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamjiP/winston-azure-table-storage.git"
+  },
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools",
+    "winston",
+    "azure",
+    "table",
+    "storage"
+  ],
+  "author": "Ramji Piramanayagam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamjiP/winston-azure-table-storage/issues"
+  },
+  "homepage": "https://github.com/RamjiP/winston-azure-table-storage#readme",
+  "dependencies": {
+    "azure-storage": "^2.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "winston": "^3.0.0-rc1"
+  }
+}
