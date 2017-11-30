@@ -1,6 +1,6 @@
 # winston-azure-table-storage
 
-Table storage transport for [winston][1] with latest (January 2017) [Microsoft azure][2] SDK. Fork of original [winston-azure-sw][0] project.
+Table storage transport for [winston][1] [Microsoft azure][2] SDK. Fork of original [winston-azure-sw][0] project.
 
 > In short, with this library you can use account/key as well as host/sas. 
 > Also, it fixes bug with generation of entity key (if your app logs too fast, it's possible to generate same keys for different entities.) in original lib.
