@@ -17,41 +17,41 @@ Here is the use of account/key pair.
 ``` js
   var winston = require('winston');
   require('winston-azure-table-storage');
-  
-  var logger = new (winston.Logger)({
-    transports: [
-        new (winston.transports.Azure)({
+  winston.configure({
+      transports: [
+          new (winston.transports.AzureTable) ({
             account: "Azure storage account sub domain ([A-Za-z0-9])",
             key: "The long Azure storage secret key",
             table: "The name of the table (why not just 'log'?)",
             partition: require('os').hostname(),
             level: 'warn',
             metaAsColumns: true
-        })
-    ]
+          })
+      ]
   });
   
-  logger.warn('Hello toto!');
+  winston.warn('Hello toto!');
 ```
 And here is the use of host/sas pair, created with Access Policies and SAS (See [Storage Explorer][4] fro details)
 ``` js
   var winston = require('winston');
   require('winston-azure-table-storage');
+
   
-  var logger = new (winston.Logger)({
-    transports: [
-        new (winston.transports.Azure)({
+  winston.configure({
+      transports: [
+          new (winston.transports.AzureTable) ({
             host: "somestorage.table.core.windows.net", 
             sas: "The long Azure SAS", // something like '?sv=2015-12-11&si=Folder1-A123&tn=folder1&sig=BLA-BLA'
             table: "Folder1", //SAS usssualy also contains it
             partition: require('os').hostname(),
             level: 'warn',
             metaAsColumns: true
-        })
-    ]
+          })
+      ]
   });
   
-  logger.warn('Hello toto!');
+  winston.warn('Hello toto!');
 ```
 
 The Azure transport accepts the following options:
