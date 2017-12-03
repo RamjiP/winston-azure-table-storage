@@ -36,7 +36,7 @@ Here is the use of account/key pair.
 And here is the use of host/sas pair, created with Access Policies and SAS (See [Storage Explorer][4] fro details)
 ``` js
   var winston = require('winston');
-  require('winston-azure-sw');
+  require('winston-azure-table-storage');
   
   var logger = new (winston.Logger)({
     transports: [
