@@ -1,6 +1,6 @@
 {
   "name": "winston-azure-table-storage",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Windows Azure table storage transport for winston, updated with Azure SDK and winston library",
   "main": "./lib/winston-azure-table-storage",
   "directories": {
